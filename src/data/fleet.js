@@ -8,7 +8,7 @@ export const fleet = [
     features: ['AC', 'Music', '2 Bags'],
     bestFor: 'Couple trips, Darjeeling day trips',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500&q=80&auto=format',
   },
   {
     id: 'mahindra-xylo',
@@ -19,7 +19,7 @@ export const fleet = [
     features: ['AC', 'Music', '4 Bags'],
     bestFor: 'Families, flexible multi-day routes',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=500&q=80&auto=format',
   },
   {
     id: 'toyota-innova',
@@ -30,7 +30,7 @@ export const fleet = [
     features: ['AC', 'Music', '5 Bags'],
     bestFor: 'Comfort, long Sikkim routes',
     featured: true,
-    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&q=80&auto=format',
   },
   {
     id: 'mahindra-bolero',
@@ -41,6 +41,6 @@ export const fleet = [
     features: ['AC', 'Music', '5 Bags'],
     bestFor: 'Large groups, North Sikkim offroad',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80&auto=format',
   },
 ];

@@ -51,7 +51,7 @@ const About = () => {
           <div className="about-image relative mt-8 md:mt-0" ref={sectionRef}>
             <div className="reveal">
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80&auto=format"
                 alt="Delight Tourism team ready at NJP"
                 className="w-full h-[300px] md:h-[520px] object-cover block"
                 loading="lazy"

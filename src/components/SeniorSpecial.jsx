@@ -11,7 +11,7 @@ const SeniorSpecial = () => {
           {/* Left: Image */}
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=700&q=80"
+              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=700&q=80&auto=format"
               alt="Senior travellers enjoying Himalayan tour"
               className="reveal w-full h-[360px] md:h-[500px] object-cover block"
               loading="lazy"

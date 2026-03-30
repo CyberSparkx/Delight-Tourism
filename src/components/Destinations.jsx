@@ -21,7 +21,7 @@ const Destinations = () => {
           
           <a href="#packages" className="reveal-child group relative overflow-hidden block h-[260px] md:h-full">
             <img 
-              src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80" 
+              src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80&auto=format" 
               alt="Darjeeling" 
               className="w-full h-full object-cover transition-transform duration-600 ease-in-out group-hover:scale-105"
               loading="lazy"
@@ -36,7 +36,7 @@ const Destinations = () => {
 
           <a href="#packages" className="reveal-child group relative overflow-hidden block h-[260px] md:h-full">
             <img 
-              src="https://images.unsplash.com/photo-1631643171709-626f69ca8be0?w=600&q=80" 
+              src="https://images.unsplash.com/photo-1631643171709-626f69ca8be0?w=600&q=80&auto=format" 
               alt="North Sikkim" 
               className="w-full h-full object-cover transition-transform duration-600 ease-in-out group-hover:scale-105"
               loading="lazy"
@@ -51,7 +51,7 @@ const Destinations = () => {
 
           <a href="#packages" className="reveal-child group relative overflow-hidden block h-[260px] md:h-full">
             <img 
-              src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=600&q=80" 
+              src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=600&q=80&auto=format" 
               alt="North East India" 
               className="w-full h-full object-cover transition-transform duration-600 ease-in-out group-hover:scale-105"
               loading="lazy"

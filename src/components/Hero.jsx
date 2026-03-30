@@ -2,17 +2,19 @@ import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 const IMAGES = [
-  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85',
-  'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&q=85',
-  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85',
-  'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1920&q=85'
+  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85&auto=format',
+  'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&q=85&auto=format',
+  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85&auto=format',
+  'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1920&q=85&auto=format'
 ];
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const heroRef = useRef(null);
 
   useEffect(() => {
+    setTimeout(() => setMounted(true), 500);
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % IMAGES.length);
     }, 5500);
@@ -54,7 +56,7 @@ const Hero = () => {
           <div
             key={index}
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[1400ms] ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-            style={{ backgroundImage: `url(${img})` }}
+            style={{ backgroundImage: (index === 0 || mounted) ? `url(${img})` : 'none' }}
           />
         ))}
         {/* Overlay */}
