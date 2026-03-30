@@ -27,11 +27,21 @@
     <link rel="canonical" href="https://www.delighttourism.in/" />
     <!-- LCP and Network Optimizations -->
     <link rel="preconnect" href="https://images.unsplash.com" />
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85&auto=format" fetchpriority="high" />
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80&auto=format" 
+          imagesrcset="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=640&q=80&auto=format 640w, 
+                       https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1024&q=80&auto=format 1024w, 
+                       https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80&auto=format 1920w" 
+          imagesizes="100vw" 
+          fetchpriority="high" />
 
+    <!-- Font Optimizations: Defer loading to prevent render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" />
+    </noscript>
     
     <script type="application/ld+json">
     {

@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 const IMAGES = [
-  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85&auto=format',
-  'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&q=85&auto=format',
-  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85&auto=format',
-  'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1920&q=85&auto=format'
+  'photo-1464822759023-fed622ff2c3b',
+  'photo-1544735716-392fe2489ffa',
+  'photo-1506905925346-21bda4d32df4',
+  'photo-1454496522488-7a8e488e8606'
 ];
 
 const Hero = () => {
@@ -51,13 +51,22 @@ const Hero = () => {
     <section id="home" className="hero relative h-screen min-h-[680px] flex flex-col justify-end overflow-hidden" ref={heroRef}>
       
       {/* Background Slideshow */}
-      <div className="hero-bg absolute inset-0 z-0">
-        {IMAGES.map((img, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[1400ms] ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-            style={{ backgroundImage: (index === 0 || mounted) ? `url(${img})` : 'none' }}
-          />
+      <div className="hero-bg absolute inset-0 z-0 bg-[#0a0a14]">
+        {IMAGES.map((imgId, index) => (
+          (index === 0 || mounted) ? (
+            <img
+              key={index}
+              src={`https://images.unsplash.com/${imgId}?w=1920&q=80&auto=format`}
+              srcSet={`https://images.unsplash.com/${imgId}?w=640&q=80&auto=format 640w, 
+                       https://images.unsplash.com/${imgId}?w=1024&q=80&auto=format 1024w, 
+                       https://images.unsplash.com/${imgId}?w=1920&q=80&auto=format 1920w`}
+              sizes="100vw"
+              alt={`Himalayan Mountains ${index + 1}`}
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchpriority={index === 0 ? "high" : "auto"}
+              className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[1400ms] ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+            />
+          ) : null
         ))}
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a14] via-[#0a0a14cc] to-[#0a0a1440] opacity-90" />
